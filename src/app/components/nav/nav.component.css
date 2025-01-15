@@ -93,3 +93,29 @@
   border: 2px solid #fff;
   cursor: pointer;
 }
+
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .user-email {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .logout-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .logout-button:hover {
+    background-color: darkred;
+  }
+  
