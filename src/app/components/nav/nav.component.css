@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #1B1C21;
+  background-color: #1b1c21;
   padding: 20px 20px;
 }
 
@@ -27,7 +27,7 @@
   padding: 12px 12px;
   border: none;
   border-radius: 5px;
-  background-color: #2E3034;
+  background-color: #2e3034;
   color: #fff;
   font-size: 14px;
 }
@@ -73,7 +73,7 @@
 }
 
 .auth-button {
-  background-color: #2E3034;
+  background-color: #2e3034;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -94,28 +94,25 @@
   cursor: pointer;
 }
 
-
 .user-info {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .user-email {
-    font-size: 14px;
-    font-weight: bold;
-  }
-  
-  .logout-button {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .logout-button:hover {
-    background-color: darkred;
-  }
-  
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-email {
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+
+.logout-button {
+  background-color: rgb(233, 15, 15);
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "Inter", sans-serif;
+}

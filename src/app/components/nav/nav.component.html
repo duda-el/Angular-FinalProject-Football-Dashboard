@@ -1,28 +1,29 @@
 <nav class="navbar">
-    <div class="navbar-logo">
-      <img src="assets/Logo.svg" alt="Onesport Logo" />
+  <div class="navbar-logo">
+    <img src="assets/Logo.svg" alt="Onesport Logo" />
+  </div>
+  <div class="navbar-search">
+    <input type="text" placeholder="Type to search..." />
+  </div>
+  <div class="navbar-actions">
+    <button class="premium-button">Go Premium</button>
+
+    <!-- Display Log In and Register when not logged in -->
+    <div class="auth-buttons" *ngIf="!isAuthenticated">
+      <button id="sign-in" class="auth-button" [routerLink]="['/login']">
+        Log In
+      </button>
+      <button id="sign-up" class="auth-button" [routerLink]="['/register']">
+        Register
+      </button>
     </div>
-    <div class="navbar-search">
-      <input type="text" placeholder="Type to search..." />
+
+    <!-- Display user email and Logout button when logged in -->
+    <div class="user-info" *ngIf="isAuthenticated">
+      <span class="user-email">
+        {{ userRole === "admin" ? "Admin" : "User" }}: {{ userName }}
+      </span>
+      <button class="logout-button" (click)="logout()">Logout</button>
     </div>
-    <div class="navbar-actions">
-      <button class="premium-button">Go Premium</button>
-      
-      <!-- Display Log In and Register when not logged in -->
-      <div class="auth-buttons" *ngIf="!isAuthenticated">
-        <button id="sign-in" class="auth-button" [routerLink]="['/login']">
-          Log In
-        </button>
-        <button id="sign-up" class="auth-button" [routerLink]="['/register']">
-          Register
-        </button>
-      </div>
-      
-      <!-- Display user email and Logout button when logged in -->
-      <div class="user-info" *ngIf="isAuthenticated">
-        <span class="user-email">{{ userName  }}</span>
-        <button class="logout-button" (click)="logout()">Logout</button>
-      </div>
-    </div>
-  </nav>
-  
+  </div>
+</nav>

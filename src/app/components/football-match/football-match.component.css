@@ -1,0 +1,112 @@
+.football_match_title{
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.football-match-container {
+  width: 1100px;
+  margin: 20px auto;
+  background-color: #1b1c21;
+  border-radius: 16px;
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ddd;
+}
+
+.tabs .tab {
+  cursor: pointer;
+  padding: 10px 15px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.tabs .tab.active {
+  border-bottom: 2px solid #f5c451;
+  color: #f5c451;
+}
+
+
+.match-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.match-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff0d;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.match-card:hover {
+  transform: scale(1.02);
+  background-color: #343438;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ddd;
+  width: 150px;
+}
+
+.team img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.score {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #f5c45142;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: #f5c451;
+  text-align: center;
+}
+
+.status {
+  font-size: 14px;
+  color: #999;
+}
+
+.date {
+  font-size: 12px;
+  color: #666;
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+}
+
+.icons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #f5c451;
+  transition: color 0.3s ease;
+}
+
+.icons button:hover {
+  color: #fff;
+}

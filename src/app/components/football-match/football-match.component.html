@@ -1,0 +1,30 @@
+<p class="football_match_title">⚽ Football Match</p>
+<div class="football-match-container">
+    <div class="tabs">
+      <span class="tab active">Latest Match</span>
+      <span class="tab">Coming Match</span>
+      <span class="tab">Pre-season</span>
+      <span class="tab">Live Games</span>
+      <span class="tab">Fun Football</span>
+    </div>
+    <div class="match-list">
+      <div *ngFor="let match of matches" class="match-card">
+        <div class="team">
+          <img [src]="match.team1Flag" alt="{{ match.team1 }}" />
+          <span>{{ match.team1 }}</span>
+        </div>
+        <div class="score">{{ match.score }}</div>
+        <div class="team">
+          <img [src]="match.team2Flag" alt="{{ match.team2 }}" />
+          <span>{{ match.team2 }}</span>
+        </div>
+        <div class="status">{{ match.status }}</div>
+        <div class="date">{{ match.date }}</div>
+        <div class="icons">
+          <button class="icon info">i</button>
+          <button class="icon stats">📊</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
