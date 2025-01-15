@@ -8,7 +8,7 @@
   <div class="navbar-actions">
     <button class="premium-button">Go Premium</button>
 
-    <!-- Display Log In and Register when not logged in -->
+
     <div class="auth-buttons" *ngIf="!isAuthenticated">
       <button id="sign-in" class="auth-button" [routerLink]="['/login']">
         Log In
@@ -18,7 +18,7 @@
       </button>
     </div>
 
-    <!-- Display user email and Logout button when logged in -->
+  
     <div class="user-info" *ngIf="isAuthenticated">
       <span class="user-email">
         {{ userRole === "admin" ? "Admin" : "User" }}: {{ userName }}

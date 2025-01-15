@@ -82,6 +82,11 @@
   margin: 10px 0;
 }
 
+.game-ended {
+  color: red;
+  font-weight: bold;
+}
+
 .teams {
   display: flex;
   justify-content: center;

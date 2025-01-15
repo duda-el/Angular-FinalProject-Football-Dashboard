@@ -1,9 +1,12 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, OnInit, OnDestroy} from '@angular/core';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.css'],
+  imports: [CommonModule],
 })
 export class BannerComponent implements OnInit, OnDestroy {
   // Countdown values
@@ -16,9 +19,9 @@ export class BannerComponent implements OnInit, OnDestroy {
   private matchTimerInterval: any;
 
 
-  matchMinutes: number = 85;
-  matchSeconds: number = 35;
-  matchTime: string = '85 : 35';
+  matchMinutes: number = 88;
+  matchSeconds: number = 30;
+  matchTime: string = '88 : 30';
 
 
   team1Score: number = 2;
@@ -84,7 +87,7 @@ export class BannerComponent implements OnInit, OnDestroy {
 
       if (this.matchMinutes >= 90) {
         clearInterval(this.matchTimerInterval);
-        this.matchTime = 'Game Ended';
+        this.matchTime = '🔴 Game Ended';
         return;
       }
 
