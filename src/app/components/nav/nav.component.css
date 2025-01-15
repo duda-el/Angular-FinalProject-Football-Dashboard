@@ -1,0 +1,95 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1B1C21;
+  padding: 20px 20px;
+}
+
+.navbar-logo {
+  flex: 1;
+}
+
+.navbar-logo img {
+  width: 250px;
+  height: auto;
+}
+
+.navbar-search {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-search input {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2E3034;
+  color: #fff;
+  font-size: 14px;
+}
+
+.navbar-search input::placeholder {
+  color: #a0a0a0;
+}
+
+.navbar-actions {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.premium-button {
+  background-color: #f5c451;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+}
+
+.cart-icon i {
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.profile-icon img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.auth-button {
+  background-color: #2E3034;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.auth-button:hover {
+  background-color: #3c3c3c;
+}
+
+.profile-icon img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+}

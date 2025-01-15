@@ -1,0 +1,93 @@
+<div class="banner_img">
+  <img src="assets/img/Card.png" alt="Banner Image" />
+  <div class="countdown-overlay">
+    <div class="game_info">England vs Germany</div>
+    <div class="game_info">Sunday, 21 January 2022</div>
+    <div class="countdown-timer">
+      <div class="time-box">
+        <span class="time-value">{{ days }}</span>
+        <span class="time-label">Days</span>
+      </div>
+      <div class="time-box">
+        <span class="time-value">{{ hours }}</span>
+        <span class="time-label">Hours</span>
+      </div>
+      <div class="time-box">
+        <span class="time-value">{{ minutes }}</span>
+        <span class="time-label">Minutes</span>
+      </div>
+      <div class="time-box">
+        <span class="time-value">{{ seconds }}</span>
+        <span class="time-label">Seconds</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="score_panel">
+    <h3>Live Match</h3>
+    <span class="match-time">{{ matchTime }}</span>
+    <div class="teams">
+      <img src="assets/img/mexico.svg" alt="Mexico" />
+      <span class="score">{{ team1Score }} - {{ team2Score }}</span>
+      <img src="assets/img/sweden.svg" alt="Sweden" />
+    </div>
+
+    <div class="stat-container">
+      <div class="stat-title">Shots on Target</div>
+      <div class="stat">
+        <span>{{ team1Stats.shotsOnTarget }}</span>
+        <div class="bar">
+          <div
+            class="bar-team1"
+            [style.width.%]="
+              calculateWidth(team1Stats.shotsOnTarget, team2Stats.shotsOnTarget)
+            "
+          ></div>
+          <div
+            class="bar-team2"
+            [style.width.%]="
+              calculateWidth(team2Stats.shotsOnTarget, team1Stats.shotsOnTarget)
+            "
+          ></div>
+        </div>
+        <span>{{ team2Stats.shotsOnTarget }}</span>
+      </div>
+    </div>
+
+    <div class="stat-container">
+      <div class="stat-title">Shots</div>
+      <div class="stat">
+        <span>{{ team1Stats.shots }}</span>
+        <div class="bar">
+          <div
+            class="bar-team1"
+            [style.width.%]="calculateWidth(team1Stats.shots, team2Stats.shots)"
+          ></div>
+          <div
+            class="bar-team2"
+            [style.width.%]="calculateWidth(team2Stats.shots, team1Stats.shots)"
+          ></div>
+        </div>
+        <span>{{ team2Stats.shots }}</span>
+      </div>
+    </div>
+
+    <div class="stat-container">
+      <div class="stat-title">Fouls</div>
+      <div class="stat">
+        <span>{{ team1Stats.fouls }}</span>
+        <div class="bar">
+          <div
+            class="bar-team1"
+            [style.width.%]="calculateWidth(team1Stats.fouls, team2Stats.fouls)"
+          ></div>
+          <div
+            class="bar-team2"
+            [style.width.%]="calculateWidth(team2Stats.fouls, team1Stats.fouls)"
+          ></div>
+        </div>
+        <span>{{ team2Stats.fouls }}</span>
+      </div>
+    </div>
+  </div>
+</div>
