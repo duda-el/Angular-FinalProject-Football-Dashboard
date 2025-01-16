@@ -1,0 +1,121 @@
+/* Container */
+.standings-container {
+  max-width: 1100px;
+  margin: 20px auto;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+}
+
+/* Title */
+.standings-title {
+  font-size: 24px;
+  color: #f5c451;
+  margin-bottom: 20px;
+}
+
+/* League Header */
+.league-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.league-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.league-logo {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}   
+
+.standings-league {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.league-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Table */
+.standings-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.standings-table th,
+.standings-table td {
+  padding: 12px;
+  border-bottom: 1px solid #444;
+}
+
+.standings-table th {
+  color: #a0a0a0;
+  font-size: 14px;
+}
+
+.standings-table td {
+  font-size: 14px;
+}
+
+.club {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.club-logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.last-match span {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.pl_logo {
+  width: 30px;
+  height: auto;
+}
+
+.circle-win {
+  background-color: rgb(0, 255, 0);
+}
+
+.circle-loss {
+  background-color: red;
+}
+
+.circle-draw {
+  background-color: orange;
+}
+
+.position {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.team-name-cont {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.team-logo {
+  width: 40px;
+  height: auto;
+}
