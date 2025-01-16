@@ -24,26 +24,22 @@ export class ClubsComponent {
     this.subscribeToFavorites();
   }
 
-  // Load all clubs from the service
   loadClubs(): void {
     this.clubService.getClubs().subscribe((data) => {
       this.clubs = data;
     });
   }
 
-  // Subscribe to favorites from the service
   subscribeToFavorites(): void {
     this.clubService.getFavoriteClubs().subscribe((favorites) => {
       this.favorites = favorites;
     });
   }
 
-  // Toggle favorite status
   toggleFavorite(clubId: number): void {
     this.clubService.toggleFavoriteClub(clubId);
   }
 
-  // Check if a club is already a favorite
   isFavorite(clubId: number): boolean {
     return this.favorites.some((fav) => fav.id === clubId);
   }

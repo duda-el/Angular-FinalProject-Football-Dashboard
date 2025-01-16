@@ -16,22 +16,22 @@ export class ClubService {
   ];
 
   private favoriteClubsSubject = new BehaviorSubject<any[]>([
-    { id: 1, name: 'Chelsea', logo: 'assets/clubs/chelsea.svg' }, // Default favorite
+    { id: 1, name: 'Chelsea', logo: 'assets/clubs/chelsea.svg' },
   ]);
 
   constructor() {}
 
-  // Get all clubs
+
   getClubs(): Observable<any[]> {
     return of(this.clubs);
   }
 
-  // Get favorite clubs as an observable
+
   getFavoriteClubs(): Observable<any[]> {
     return this.favoriteClubsSubject.asObservable();
   }
 
-  // Add or remove a club from favorites
+
   toggleFavoriteClub(clubId: number): void {
     const favorites = this.favoriteClubsSubject.value;
     const club = this.clubs.find((c) => c.id === clubId);
@@ -39,13 +39,13 @@ export class ClubService {
     if (club) {
       const index = favorites.findIndex((fav) => fav.id === club.id);
       if (index === -1) {
-        // Add to favorites
+
         this.favoriteClubsSubject.next([
           ...favorites,
           { id: club.id, name: club.name, logo: club.logo },
         ]);
       } else {
-        // Remove from favorites
+
         this.favoriteClubsSubject.next(
           favorites.filter((fav) => fav.id !== club.id)
         );

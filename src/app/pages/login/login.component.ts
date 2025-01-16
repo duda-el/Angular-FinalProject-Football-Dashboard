@@ -7,9 +7,9 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule, RouterModule], // Include necessary modules
+  imports: [FormsModule, RouterModule],
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'] // Corrected the property name to styleUrls
+  styleUrls: ['./login.component.css'] 
 })
 export class LoginComponent {
   loginData = { email: '', password: '' };
@@ -20,7 +20,7 @@ export class LoginComponent {
     this.authService.login(this.loginData).subscribe({
       next: (response) => {
         console.log('Login successful');
-        this.router.navigate(['/']); // Redirect after login
+        this.router.navigate(['/']); 
       },
       error: (err) => {
         console.error('Login failed', err);
