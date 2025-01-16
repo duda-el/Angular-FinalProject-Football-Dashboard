@@ -1,40 +1,50 @@
-<div class="standings-container">
-  <h2 class="standings-title">🏆 Standings</h2>
-  <h2 class="standings-league"><img class="pl_logo" src="assets/leagues/pl.svg"> Premier League</h2>
-  <table class="standings-table">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Club</th>
-        <th>W</th>
-        <th>D</th>
-        <th>L</th>
-        <th>Points</th>
-        <th>Last Matches</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let team of standings; let i = index">
-        <td>{{ i + 1 }}</td>
-        <td class="team-name-cont">
-          <img [src]="team.logo" alt="{{ team.name }}" class="team-logo" />
-          <div>{{ team.name }}</div>
-        </td>
-        <td>{{ team.wins }}</td>
-        <td>{{ team.draws }}</td>
-        <td>{{ team.losses }}</td>
-        <td>{{ team.points }}</td>
-        <td class="last-match">
-          <span
-            *ngFor="let match of team.last_matches"
-            [ngClass]="{
-              'circle-win': match === 'win',
-              'circle-loss': match === 'loss',
-              'circle-draw': match === 'draw'
-            }"
-          ></span>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<app-nav></app-nav>
+<div class="main_content">
+  <div class="left_nav"><app-leftnav></app-leftnav></div>
+  <div class="other">
+    <div class="standings-container">
+      <div class="standings-titles">
+        <h2 class="standings-league">
+          <img class="pl_logo" src="assets/leagues/pl.svg" /> Premier League
+        </h2>
+        <h2 class="standings-title">🏆 Standings</h2>
+      </div>
+      <table class="standings-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Club</th>
+            <th>W</th>
+            <th>D</th>
+            <th>L</th>
+            <th>Points</th>
+            <th>Last Matches</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let team of standings; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td class="team-name-cont">
+              <img [src]="team.logo" alt="{{ team.name }}" class="team-logo" />
+              <div>{{ team.name }}</div>
+            </td>
+            <td>{{ team.wins }}</td>
+            <td>{{ team.draws }}</td>
+            <td>{{ team.losses }}</td>
+            <td>{{ team.points }}</td>
+            <td class="last-match">
+              <span
+                *ngFor="let match of team.last_matches"
+                [ngClass]="{
+                  'circle-win': match === 'win',
+                  'circle-loss': match === 'loss',
+                  'circle-draw': match === 'draw'
+                }"
+              ></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

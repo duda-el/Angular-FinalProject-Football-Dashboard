@@ -2,9 +2,15 @@
   <div class="menu-section">
     <h4>Menu</h4>
     <ul class="nav_icon_main">
-      <div class="nav_icon" [routerLink]="['/']"><img src="assets/icons/dashboard.svg" alt="dashboard" />Dashboard</div>
-      <div class="nav_icon"><img src="assets/icons/shop.svg" alt="dashboard" [routerLink]="['/standings']"/>Standings</div>
-      <div class="nav_icon"><img src="assets/icons/standings.svg" alt="dashboard" />Shop</div>
+      <div class="nav_icon" [routerLink]="['/']">
+        <img src="assets/icons/dashboard.svg" alt="dashboard" />Dashboard
+      </div>
+      <div class="nav_icon" [routerLink]="['/standings']">
+        <img src="assets/icons/shop.svg" alt="dashboard" />Standings
+      </div>
+      <div class="nav_icon">
+        <img src="assets/icons/standings.svg" alt="dashboard" />Shop
+      </div>
     </ul>
   </div>
 
@@ -16,8 +22,7 @@
         2022
       </li>
       <li>
-        <img src="assets/leagues/pl.svg" alt="Premier League" /> Premier
-        League
+        <img src="assets/leagues/pl.svg" alt="Premier League" /> Premier League
       </li>
       <li><img src="assets/leagues/laliga.svg" alt="La Liga" /> La Liga</li>
       <li><img src="assets/leagues/ligue1.svg" alt="Ligue 1" /> Ligue 1</li>
@@ -34,5 +39,4 @@
       </li>
     </ul>
   </div>
-  
 </div>

@@ -1,19 +1,37 @@
-/* Container */
+.main_content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.other {
+  width: 90%;
+  height: 84.5vh;
+  background-color: #212227;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .standings-container {
-  max-width: 1100px;
-  margin: 20px auto;
+  width: 1100px;
+  margin: 30px auto;
   font-family: "Inter", sans-serif;
   color: #fff;
 }
 
-/* Title */
+.standings-titles{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .standings-title {
   font-size: 24px;
   color: #f5c451;
   margin-bottom: 20px;
 }
 
-/* League Header */
 .league-header {
   display: flex;
   align-items: center;
@@ -31,7 +49,7 @@
   width: 30px;
   height: 30px;
   object-fit: cover;
-}   
+}
 
 .standings-league {
   display: flex;
