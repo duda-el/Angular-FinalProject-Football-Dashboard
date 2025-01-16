@@ -1,0 +1,17 @@
+<div class="clubs-container">
+    <div class="clubs-header">
+      <h2 class="clubss-title">🎮 Follow Club</h2>
+    </div>
+    <swiper-container class="clubs-swiper" slides-per-view="6" space-between="30">
+      <swiper-slide *ngFor="let club of clubs" class="club-slide">
+        <div
+          class="club-item"
+          [class.selected]="isFavorite(club.id)"
+          (click)="toggleFavorite(club.id)"
+        >
+          <img [src]="club.logo" alt="Club Logo" class="club-logo" />
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+  

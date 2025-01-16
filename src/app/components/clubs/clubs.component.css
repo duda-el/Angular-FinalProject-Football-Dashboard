@@ -1,0 +1,93 @@
+/* Container */
+.clubs-container {
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 25px;
+  max-width: 1100px;
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+.clubs-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.clubss-title {
+  color: white;
+  font-size: 25px;
+  margin-bottom: 20px;
+  font-weight: lighter;
+}
+
+/* Swiper */
+.clubs-swiper {
+  width: 1100px;
+  padding: 10px 0;
+  gap: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #f5c451;
+  font-size: 2rem;
+  z-index: 10;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #e6b846;
+}
+
+.swiper-pagination-bullet {
+  background-color: #f5c451;
+}
+
+/* Club Items */
+.club-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 130px;
+  background-color: #2e3034;
+  border-radius: 50%;
+  transition: border 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  background-color: #1b1c21;
+}
+
+.club-item.selected {
+  border: 3px solid #f5c451;
+}
+
+.club-logo:hover {
+  transform: scale(1.1);
+}
+
+.club-logo {
+  width: 70px;
+  height: auto;
+  object-fit: cover;
+  transition: border 0.3s ease, transform 0.3s ease;
+}
+
+/* Club Names */
+.club-name {
+  color: #a0a0a0;
+  font-size: 0.9rem;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
